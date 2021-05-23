@@ -1,0 +1,90 @@
+9.1
+Write a program where you define three integer variables: number1, number2 and sum. 
+Then define three integer pointers that point to the aforementioned variables. 
+Ask the user two integer values and calculate and print out the sum using only the pointers.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	int a;
+	int b;
+	int sum;
+	int *x = &a;
+	int *y = &b;
+	int *z = &sum;
+	printf("input first number :\n");
+	scanf("%d", &a);
+	printf("input second number :\n");
+	scanf("%d", &b);
+	sum = *x + *y;
+	printf("sum of the inputs are %d", *z);
+}
+
+
+9.2
+Write a function that swaps the values of two integers. Test your function in main.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void swapvalue(int *number1, int *number2)
+{
+	int temp = *number1;
+	*number1 = *number2;
+	*number2 = temp;
+}
+
+
+int main()
+{	
+	int a;
+	int b;
+	
+	printf("input first number :\n");
+	scanf("%d", &a);
+	printf("input second number :\n");
+	scanf("%d", &b);
+
+	swapvalue(&a,&b);
+	
+	printf(" first number is  %d:\n", a);
+	printf(" second number is %d :\n", b);
+}
+
+
+
+9.3
+Write a function that gets two int pointers as a parameter. The function prints out the bigger integer.
+
+####INCOMPLETE####
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void bigger(int *number1, int *number2)
+{
+	
+}
+
+
+int main()
+{	
+	int a;
+	int b;
+	
+	printf("input first number :\n");
+	scanf("%d", &a);
+	printf("input second number :\n");
+	scanf("%d", &b);
+
+	bigger(&a,&b);
+	
+	printf(" bigger number is  %d:\n", );
+	
+}

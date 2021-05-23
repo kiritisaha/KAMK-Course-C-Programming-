@@ -1,0 +1,103 @@
+
+
+7.1 Make a program that asks the user two words and then prints out the words in alphabetical order.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+int main()
+{
+	char a[10] = "";
+	char b[10] = "";
+
+	printf("Input first Words:");
+	scanf("%s", &a);
+	printf("Input Second Words:");
+	scanf("%s", &b);
+
+	printf("Inserted words are in alphabatic order:");
+
+	if (strcmp(a,b) < 0 )
+	{
+		printf("%s %s\n", a, b);
+	}
+	else
+	{
+		printf("%s %s\n", b, a);
+	}
+	
+}
+
+
+7.2 
+
+Write a program that asks the user for a string (for example: cat). 
+The program prints out the converted string (for example: tac)
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+
+int main()
+{
+	char a[10] = "";
+	int length = 0;
+
+	printf("Input a Word:");
+	scanf("%s", &a);
+
+	printf("The fliffed Word is : ");
+	length = strlen(a);
+	for (int i = length-1; i >= 0; i--)
+	{
+		printf("%c", a[i]);
+	}
+
+
+}
+
+
+
+7.3
+
+/* Make a program for learning foreign language words. In the program, there are few hard coded words which counterparts are asked from the user, for example:
+Please enter the word in English:
+kissa > a cat
+koira > a dog
+...
+...
+marsu > a guine pig
+
+You got 5/5 points
+*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+	char finish[3][20] = {"kissa","koira","hevonen"};
+	char english[3][20] = {"cat","dog","horse" };
+	char temp[20];
+	int points = 0;
+
+	for (int i = 0; i < 3; i++)
+	{
+		printf("Enter the English version of the finish word: '%s' \n", finish[i]);
+		scanf("%s", &temp);
+
+		if (strcmp(temp, english[i]) == 0)
+		{
+			points++;
+		}
+	}
+
+	printf("You got %d/3 points \n", points);
+
+	
+}

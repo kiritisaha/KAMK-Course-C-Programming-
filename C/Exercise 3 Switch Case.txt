@@ -1,0 +1,120 @@
+exercise 3.1 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int a;
+	int b;
+
+	printf("Plz input a number between 1 to 5 \n");
+	scanf("%d", &a);
+	
+	switch (a)
+	{
+	case 1:
+		printf("One\n");
+		break;
+	case 2:
+		printf("Two\n");
+		break;
+	case 3:
+		printf("Three\n");
+		break;
+	case 4:
+		printf("Four\n");
+		break;
+	case 5:
+		printf("Five\n");
+		break;
+	default:
+		printf("Unknown entry!");
+	}
+}
+
+
+--------------------------------------------------------------
+
+exercise 3.2
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int a;
+
+	printf("Plz input the number of a month: \n");
+	scanf("%d", &a);
+
+	switch (a)
+	{
+	case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+		printf("This momth has 31 days\n");
+		break;
+	case 4: case 6: case 9: case 11:
+		printf("This month has 30 days\n");
+		break;
+	case 2:
+		printf("This month has 28 or 29 days\n");
+		break;
+	default:
+		printf("Unknown entry!");
+	}
+}
+
+--------------------------------------------------------------------------------
+
+exercise 3.3   Calculator
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	float a;
+	float b;
+	char f;
+
+	printf("Plz input the 1st number: \n");
+	scanf("%d", &a);
+	printf("Plz input the 2nd number: \n");
+	scanf("%d", &b);
+	printf("Plz input the Operand, among these:  + - * /: \n");
+	scanf(" %c", &f);
+
+	float w = a + b;
+	float x = a - b;
+	float y = a * b;
+	float z = a / b;
+
+
+	switch (f)
+	{
+	case '+' :
+		printf("Sum of the numbers is %.2f \n", w);
+		break;
+	case '-' :
+		printf("Difference of the numbers is % .2f \n", x);
+		break;
+	case '*' :
+		printf("Multi of the numbers is %.2f \n", y);
+		break;
+	case '/' :
+		printf("Divide of the numbers is %.2f \n", z);
+		break;
+	default:
+		printf("Unknown entry!");
+	}
+}
+
+
+
+-------------------------------------------------------------------
+
+

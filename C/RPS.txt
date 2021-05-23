@@ -1,0 +1,99 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+int main()
+{
+	int wins = 0 ;
+	int computerWins = 0 ;
+	int ComputerChoice = 0 ;
+	int rounds;
+	char userChoiceAsChar;
+	int userChoiceAsInt;
+	int result = 0 ;
+	
+	srand(time(0));
+
+	printf("Welcome to Rock Paper Scissors Game !!\n");
+	printf("How Many Rounds you wishes to play??\n");
+	scanf("%d", &rounds);
+
+	for ( int i = 1 ; i <= rounds ; i++)
+	{
+
+		do
+		{
+			printf("Please enter your Choice: R/rock , P/paper, S/scissors: \n");
+			scanf(" %c", &userChoiceAsChar);
+
+			printf("You Have Entered: %c\n", userChoiceAsChar);
+
+			if (userChoiceAsChar == 'r' || userChoiceAsChar == 'R')
+			{
+				userChoiceAsInt = 1;
+				printf("User Choice 1 = Rock \n");
+				break;
+			}
+			else if (userChoiceAsChar == 'p' || userChoiceAsChar == 'P')
+			{
+				userChoiceAsInt = 2;
+				printf("User Choice 2 = Paper \n");
+				break;
+			}
+			else if (userChoiceAsChar == 's' || userChoiceAsChar == 'S')
+			{
+				userChoiceAsInt = 3;
+				printf("User Choice 3 = Scissor \n");
+				break;
+			}
+			else
+			{
+				printf("Wrong Input!\n");
+			}
+
+		} while (1);
+
+
+		ComputerChoice = rand() % 3 + 1;
+
+		printf("Computer Has Choosen: %d \n", ComputerChoice);
+
+
+		if (ComputerChoice == 1)
+			{
+				printf("Computer has choosen Rock!!\n");
+			}
+			else if (ComputerChoice == 2)
+			{
+				printf("Computer has choosen Paper!!\n");
+			}
+			else if (ComputerChoice == 3)
+			{
+				printf("Computer has choosen Scissor!!\n");
+			}
+
+
+		if (userChoiceAsInt == 1 && ComputerChoice == 3 || userChoiceAsInt == 2 && ComputerChoice == 1 || userChoiceAsInt == 3 && ComputerChoice == 2)
+		{
+			printf("Congratulations!! You Have this round Won!!");
+			result = result++;
+			wins = wins++;
+		}
+		else if (userChoiceAsInt == ComputerChoice)
+		{
+			printf("OH hoo !! It's a DRAW ! \n");
+			result = result + 0;
+		}
+		else
+		{
+			printf("Computer Wins , Better Luck Next Time!!\n");
+			result = result--;
+			computerWins = computerWins++;
+		}
+		printf("The Result is %d \n", result);
+	}
+
+
+	}
+
+	

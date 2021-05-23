@@ -1,0 +1,77 @@
+
+Excercise 1.1 : Define the Avg of two float numbers 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int nb1;
+	int nb2;
+	int nb3;
+	printf("Enter first number:");
+	scanf("%d", &nb1);
+	printf("Enter second number:");
+	scanf(" %d", &nb2);
+	nb3 = (nb1 + nb2)/2;
+	printf("you have entered %d and %d!\n", nb1, nb2);
+	printf("Sum of given nb is %d!\n", nb1 + nb2);
+	printf("So the Avg of given value is: %d", (nb1 + nb2) / 2);
+}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	float nb1;
+	float nb2;
+	float nb3;
+	printf("Enter first number:");
+	scanf("%f", &nb1);
+	printf("Enter second number:");
+	scanf(" %f", &nb2);
+	nb3 = (nb1 + nb2)/2;
+	printf("you have entered %f and %f!\n", nb1, nb2);
+	printf("Sum of given nb is %f!\n", nb1 + nb2);
+	printf("So the Avg of given value is: %f", (nb1 + nb2) / 2);
+}
+
+excersize 1.2 : Define 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	float nb1;
+	
+	printf("Enter the Radious:");
+	scanf("%f", &nb1);
+	
+	printf("you have entered %f!\n", nb1);
+	
+	printf("So the Area of the Circle is: %f", 2*3.1416*nb1*nb1);
+}
+
+
+exercise 1.3 : Exchange Farenhite to Celcious 
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	float nb1;
+	
+	printf("Enter the Farenhite Value:");
+	scanf("%f", &nb1);
+	
+	printf("you have entered %f!\n", nb1);
+	
+	printf("So the Celcious value of the given Farenhite value is : %f",(nb1-32)*(5.0/9.0));
+}
+
+
+
+

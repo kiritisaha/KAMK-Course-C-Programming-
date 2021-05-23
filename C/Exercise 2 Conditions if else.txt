@@ -1,0 +1,174 @@
+positive and negative value
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int x;
+	printf("Enter a Value:");
+	scanf("%d", &x);
+	printf("Your Input is  %d \n", x);
+
+	if (x > 0)
+	{
+		printf("Its a positive value bro\n");
+	}
+	else if (x == 0)
+	{
+		printf("Its Just a big ZERO !!\n");
+	}
+	else if (x < 0)
+	{
+		printf("It's  a Negative value, right ??\n");
+	}
+	else
+	{
+		printf("No Idea what you have entered bro ! try again :P ??\n");
+	}
+
+}
+
+
+
+Price & Discount Value
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	printf("Enter the product price:");
+	float x;
+	scanf("%f", &x);
+	printf("Enter the Discount Amount:");
+	float y;
+	scanf("%f", &y);
+
+	printf("Your provided price is %.2f and desired Discount is %.2f \n", x, y );
+
+	if ( y >= 50 )
+	{
+		printf("Its a Good Deal!!\n");
+	}
+
+	else if ( y <= 10 )
+	{
+		printf("Its Not a good deal \n");
+	}
+
+}
+
+
+sum & Multi 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	float a;
+	float b;
+	float x;
+	float y;
+	char sign;
+
+	printf("Enter First Value:");
+	scanf("%f", &x);
+
+	printf("Enter Second Value:");
+	scanf("%f", &y);
+
+	printf("Now please input the operand,  +  or  *  \n");
+	scanf(" %c", &sign);
+
+	//printf("Your input is %.2f and %.2f \n", x, y);
+
+
+	if (sign == '*')
+	{
+		b = (x * y);
+		printf("The Multi of these number is %.2f \n", b);
+	}
+	else if (sign == '+')
+	{
+		a = (x + y);
+		printf("The sum of the number is %.2f \n", a);
+	}
+
+	//printf("Sum is %.2f and Multi is %.2f", a, b);
+}
+
+
+
+% divisable ...
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int a;
+	int b;
+
+	printf("Enter First Value:");
+	scanf("%d", &a);
+
+	printf("Enter Second Value:");
+	scanf("%d", &b);
+	int x = a % b;
+	int y = b % a;
+
+	if (a > 0 && b > 0)
+	{
+
+		if (a > b)
+		{
+			if (x == 0)
+			{
+				printf("First number is divisible by second\n");
+
+			}
+			else
+			{
+				printf("not divisible\n");
+			}
+
+		}
+		else
+		{
+			if (y == 0)
+
+			{
+				printf("2nd number is divisible by 1st\n");
+
+			}
+			else
+			{
+				printf("not divisible\n");
+			}
+
+		}
+
+	}
+
+	else
+	{
+		printf("Wrong input!");
+	}
+}
+
+
+
+
+
+
+
+
+

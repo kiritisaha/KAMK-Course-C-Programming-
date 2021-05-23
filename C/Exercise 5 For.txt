@@ -1,0 +1,141 @@
+5.1
+
+Write a program that asks the user to input five integers 
+and then prints the sum and the average of the numbers to the console. 
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+
+{
+	int i;
+	int input;
+	int sum = 0;
+	float avg = 0;
+
+	
+	for (i = 1; i <= 5; i++)
+	{
+		printf("Please Enter the numbers:\n");
+		scanf("%d", &input);
+		//sum = sum + input;
+		sum += input;
+	}
+	printf("The Sum of the numbers ia %d \n", sum);
+	avg = sum / 5.0f;
+	printf("The avg of the numbers is %.2f \n", avg);
+
+}
+
+
+5.2
+
+Change the program so that the user can define how many numbers she wishes to enter. 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+
+{
+	int i;
+	int round;
+	int input;
+	int sum = 0;
+	float avg = 0;
+
+	printf("How many numbers you want to input?\n");
+	scanf("%d", &round);
+
+	for (i = 1; i <= round; i++)
+	{
+		printf("Please Enter the numbers:\n");
+		scanf("%d", &input);
+		//sum = sum + input;
+		sum += input;
+	}
+	printf("The Sum of the numbers ia %d \n", sum);
+	avg = sum / 5.0f;
+	printf("The avg of the numbers is %.2f \n", avg);
+
+}
+
+
+5.3
+
+Write a program that prints out all the numbers between the two given integer values. 
+For example, user enters 14 and then 20, the program prints out: 15, 16, 17, 18, 19
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+
+{
+	int i;
+	int input1;
+	int input2;
+
+	printf("plz put the first input?\n");
+	scanf("%d", &input1);
+	printf("plz put the 2nd input?\n");
+	scanf("%d", &input2);
+
+	for (i = input1; i <= input2; i++)
+	{
+		printf("%d \n",i);
+	}
+
+}
+
+
+5.4
+
+Write a program that asks the user the width and height of a rectangle and then draws it using *-sign.
+ For example, user enters 3 as height and 5 as width and the program prints out:
+*****
+*****
+*****
+
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+
+{
+	int i;
+	int j;
+	int input1;
+	int input2;
+
+	printf("plz put the first input for Length?\n");
+	scanf("%d", &input1);
+	printf("plz put the 2nd input for Width?\n");
+	scanf("%d", &input2);
+
+
+	for (i = 0; i < input1; i++)
+	{
+		for (j = 0; j < input2; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+}
+
+
+------------------------------------------------------------------

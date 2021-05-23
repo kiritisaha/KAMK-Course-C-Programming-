@@ -1,0 +1,63 @@
+int main()
+{
+	printf("Name:\tAmit\n");
+	printf("Country:\tBangladesh\n\n");
+	printf("*\n**\n***\n\n");
+
+
+	printf("My birth year  is %d AD.\n", 1986);
+	printf("%d + %d = %d\n", 10, 30, 70);
+	printf("My height is %.2f feet & my Weight is: %d Kg.\n", 5.9,80); // .2 is for 2 value after decimal.//
+}
+
+-------------------------
+
+	int number = 0;
+	char alphabet = 0;
+
+	printf("Enter a number > ");
+	scanf("%d", &number);
+
+	printf("Enter a Alphabet > ");
+	scanf(" %c", &alphabet); //a blank space b4 %c
+
+	printf("You have entered %d and %c!\n", number, alphabet);
+	
+	
+	-------------------------
+	
+	char wholename[30];
+	printf("Please Enter Your Name >");
+	gets(wholename);
+
+	printf("So, Your name is: %s\n", wholename);
+}
+
+-----------------------
+
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int number1 = 1;
+	int number2 = -1;
+	printf("1 %i\n",number1);
+	printf("1 %i\n", number2);
+	number1 = ++number2;
+	printf("2 %i\n", number1);
+	printf("2 %i\n", number2);
+	number1++;
+	printf("3 %i\n", number1);
+	printf("3 %i\n", number2);
+}
+
+
+
+
+-------------------
+
+
+
+
+
+

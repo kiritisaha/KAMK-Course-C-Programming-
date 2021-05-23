@@ -1,0 +1,59 @@
+odd even
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int x;
+		printf("enter a number to find out add or even:\n");
+	scanf("%d", &x);
+	if (x % 2 == 0)
+	{
+		printf("The Number is Even!!\n");
+	}
+	else
+	{
+		printf("The Number is Odd!!");
+	}
+
+}
+
+
+----------------
+
+Vowel & Consonent
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	char syllable;
+
+	printf("enter a syllable to find out Vowel or Consonent:\n");
+	scanf("%c", &syllable);
+	if (syllable == 'a' || syllable == 'e' || syllable == 'i' || syllable == 'o' || syllable == 'u')
+	{
+		printf("The Syllable  %c is Vowel!!\n", syllable);
+	}
+	else
+	{
+		printf("The Syllable %c is Consonent!!", syllable);
+	}
+
+}
+
+___________________________-------------
+
+
+
+
+
+
+
+
+
+

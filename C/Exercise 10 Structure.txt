@@ -1,0 +1,45 @@
+Exercise 10: structs
+Define a struct called MOBILEGAME that has three members: name, pulisher and price
+In main, create three MOBILEGAME type structs with following information:
+game1:  name: HayDay, publisher: Supercell, price: 0.0
+game2: name: Geometry Dash, publisher: RobTop Games, price: 2.29
+game3: name: Minecraft, publisher: Mojang, price: 7.99
+Write a function that gets one struct MOBILEGAME as a parameter and prints out the values its members to the console. Test the function.
+Write a function that gets two MOBILEGAME structs as a parameter. 
+The function prints out the sum of the games' prices to the console.
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+struct MOBILEGAME
+{
+	char name[20];
+	char publisher[20];
+	float price;
+};
+
+void gamedetails(struct MOBILEGAME game)
+{
+	printf("Name : %s\n Publisher : %s\n Price : %.2f\n", game.name, game.publisher, game.price);
+}
+
+void gameprice(struct MOBILEGAME gadha, struct MOBILEGAME goru)
+{
+	float sum = gadha.price + goru.price;
+	printf("The Value / price Sum of the game is %.2F", sum);
+}
+
+int main()
+{
+	struct MOBILEGAME game1 = {"HayDay", "Supercell", 0.0};
+	struct MOBILEGAME game2 = {"Geometry Dash", "RobTop Games", 2.29 };
+	struct MOBILEGAME game3 = { "Minecraft", "Mojang", 7.99 };
+
+	gamedetails(game1);
+	gamedetails(game2);
+	gamedetails(game3);
+	gameprice(game2, game3);
+}

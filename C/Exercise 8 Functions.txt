@@ -1,0 +1,127 @@
+8.1 
+Write a function that gets the length and width of a room and prints out the area of the room. 
+The return type of the function should be void. Test your function in the main function. 
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void roomarea(float in1, float in2)
+{
+	float area;
+	area = in1 * in2;
+	printf("RoomArea is %.2f", area);
+}
+
+
+int main()
+
+{
+	float a;
+	float b;
+	printf("enter length & width of the room \n");
+	scanf("%f", &a);
+	scanf("%f", &b);
+	roomarea(a,b);
+}
+
+--------------------------------------------------------------------------------------------------------
+
+8.2
+
+Write a function that gets two parameters: the price and the discount percent. 
+The function returns the reduced price. Test your function in the main function. 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void price(float in1, float in2)
+{
+	float price;
+	price = (in1*in2)/100;
+	printf(" Discounted Price is %.2f", price);
+}
+
+
+int main()
+{
+	float a;
+	float b;
+	printf("Please Enter the Price of Product : \n");
+	scanf("%f", &a);
+	printf("Please enter the Discount of Product : \n");
+	scanf("%f",&b);
+	price(a, b);
+}
+
+---------------------
+
+8.3
+
+Write a function that counts the average of the elements of the int array passes as a parameter. 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void arrayfunction(int int_array[], int size)
+{
+	float avg;
+	float sum = 0;
+	for (int i = 0; i < size; i++)
+	{
+		sum = sum + int_array[i];
+	}
+	avg = sum / size;
+	printf(" Avarage of the parameters of array is %.2f", avg);
+}
+
+
+int main()
+{
+	int a[4] = {3,4,5,6};
+	int b = 4 ;
+	arrayfunction(a, b);
+}
+
+-------------------------------------------------------
+
+8.4
+
+Write a function that returns the number of occurrences of a given number in the given array. The function gets three parameters. 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+void arrayfunction(int int_array[], int size, int checkValue)
+{
+	int occurances = 0;
+	for (int i = 0; i < size; i++)
+	{
+		if (int_array[i] == checkValue )
+		{
+			occurances++;
+		}
+	}
+	printf(" Occurance of the parameters of array is %d", occurances);
+}
+
+
+int main()
+{
+	int a[10] = { 3, 2, 5, 2, 5, 2, 9, 2, 3, 1 }; // fixed input
+	int b = 10 ; // input fixed size
+	int input = 2; // fixed manual input
+	arrayfunction(a, b, input);
+}
+
+
+------------------------------------------------------
+

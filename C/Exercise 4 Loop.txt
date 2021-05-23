@@ -1,0 +1,158 @@
+4.1
+
+Write a program that asks the user a number between 1-5 and prints out the given number as a text.
+For example “1” should result as “one”. Use switch-case.
+Change the program that asks the numbers of months (Exercise 3.2 ) 
+so that the user is asked in the end if she wants to enter another month number. 
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int a;
+	char again;
+
+	
+	do
+	{
+
+		printf("Plz input the number of a month: \n");
+		scanf("%d", &a);
+
+		switch (a)
+		{
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+			printf("This momth has 31 days\n");
+			break;
+		case 4: case 6: case 9: case 11:
+			printf("This month has 30 days\n");
+			break;
+		case 2:
+			printf("This month has 28 or 29 days\n");
+			break;
+		default:
+			printf("Unknown entry!");
+			break;
+		}
+
+		printf("Do you Want to check another month? 'y' or 'n' \n");
+		scanf(" %c",&again);
+
+	} while (again == 'y');
+
+}
+
+
+
+4.2
+
+Write a program where you use rand()-function to generate a secret number between 0 and 20 
+The user tries to guess the secret number. After each wrong answer give the user a hint:
+ “Your number was too big/too small” etc. The rand-function is used as: int secerNumber = rand() % 20 + 1;
+ Before using rand it is recommended to call srand(time(0));
+ for initializing the seed mused in random number generation.
+ Using srand-function requires the inclusion of time.h header: #include <time.h> 
+
+
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main()
+{
+	int input;
+	int secerNumber;
+	srand(time);
+	secerNumber = rand() % 20 + 1;
+
+	while (1)
+	{
+
+		printf("Plz guess a number between 1 to 20\n");
+		scanf("%d", &input);
+
+	if (secerNumber > input)
+	{
+		printf("The number you have guessed is too small! try again !!\n");
+	}
+	else if (secerNumber < input)
+	{
+		printf("The number you have guessed is Bigger! try again !!\n");
+	}
+	else if (secerNumber == input)
+
+	{
+		printf("Bingo!!The number you have guessed is absoutely right !!!\n");
+		break;
+	}
+
+	//printf("Secret guess was %d", secerNumber);
+	}
+}
+
+
+
+.-------------------------------
+
+
+4.3
+
+
+Write a program for multiplication table (1-10) rehearsal. 
+First the program asks the user to enter the multiplier (1-10) and then it asks the calculations one at a time, 
+eg.: 1*2= ?, 2*2=?, 3*2 = ? In the end, the program should print out the number of correct answers.
+
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int number = 1;
+	int multiplier = 0;
+	int answer = 0;
+	int correctanswer = 0;
+
+	printf("Please enter the multiplier (between 1 to 10) \n");
+	scanf("%d", &multiplier);
+
+	while (number <= 10)
+	{
+		printf("Whats the answer of %d * %d ?\n", number, multiplier);
+		scanf("%d", &answer);
+
+		if (answer == number * multiplier)
+		{
+			correctanswer++;
+		}
+		number++;
+	}
+	printf("Your Point is : %d /10 !  \n", correctanswer);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

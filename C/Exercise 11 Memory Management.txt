@@ -1,0 +1,80 @@
+Create a struct HOBBY that has two members: name and schedule
+
+In main, create one dynamic struct HOBBY called hobby1. 
+Set the name and schedule to "orienteering" and "wednesday" using the strcpy-function
+
+Print the values of the members to the console and then free the dynamic struct.
+
+Create a function createNewHobby() that returns a struct HOBBY as a return value. 
+The function asks the user the name and the schedule of a hobby and creates a struct HOBBY variable (not a dynamic one!)
+
+In main, create a dynamic array of type struct HOBBY. 
+First, ask the user how many hobbies she wants to add. 
+Then in a for-loop, call the createNewHobby-function and add the hobbies into array.
+
+Create a function called printHobbyDays. 
+The function gets a struct HOBBY type array and its size as a parameter. 
+The function prints out the names of the hobby days. (schedule). Test the function from the main method.
+
+Free the hobbies array.
+
+################ NOT COMPLETED
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>;
+
+struct HOBBY
+{
+	char name[20];
+	char schedule[20];
+};
+
+struct HOBBY createNewHobby();
+void printHobbyDays(struct HOBBY* hobbies, int size);
+
+int main()
+{
+	struct HOBBY *hobby1 = (struct HOBBY*)malloc(sizeof(struct HOBBY));
+	strcpy(hobby1->name , "orienteering");
+	strcpy(hobby1->schedule , "wednesday\n");
+
+	printf("Hobby Name: %s, schedule: %s", hobby1->name, hobby1->schedule);
+	free(hobby1);
+
+	int size = 0;
+
+	printf("Please enter the size of the Hobbies array >");
+	scanf("%d", size); //asking the size of the hobbies array
+
+	//create array dynamically
+	struct HOBBY* hobbies = (struct HOBBY*)malloc(sizeof(struct HOBBY) * size);
+	for (int i = 0; i < size; i++)
+	{
+		hobbies[i] = createNewHobby();
+	}
+
+	printHobbyDays(hobbies, size);
+	free(hobbies);
+}
+
+struct HOBBY createNewHobby()
+{
+	struct HOBBY newHobby;
+	printf("Please Enter name of a new Hobby :");
+	scanf("%s", &(newHobby.name));
+	printf("Please Enter Schedule for the new Hobby :");
+	scanf("%s", &(newHobby.schedule));
+	return newHobby;
+}
+
+void printHobbyDays(struct HOBBY* hobbies, int size)
+{
+	printf("You Have Hobbies on : ");
+	for (int i = 0; i < size; i++)
+	{
+		printf("%s", hobbies[i].schedule);
+	}
+	printf("\n");
+}
