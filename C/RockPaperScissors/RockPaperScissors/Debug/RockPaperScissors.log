@@ -1,3 +1,0 @@
-﻿  RPS.c
-C:\Users\Biva-Amit\source\repos\RockPaperScissors\RockPaperScissors\RPS.c(20,15): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
-  RockPaperScissors.vcxproj -> C:\Users\Biva-Amit\source\repos\RockPaperScissors\Debug\RockPaperScissors.exe
